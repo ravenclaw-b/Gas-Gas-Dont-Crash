@@ -6,7 +6,8 @@ public class movement : MonoBehaviour
 {
     public float speed = 2;
     public float time;
-    public Rigidbody rigidbody;
+
+    public GameObject self;
 
     void Start()
     {
@@ -16,6 +17,6 @@ public class movement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, 5);
-        rigidbody.MovePosition(transform.position + m_Input * Time.deltaTime * 4);
+        self.GetComponent<Rigidbody>().MovePosition(transform.position + m_Input * Time.deltaTime * 4);
     }
 }
