@@ -5,13 +5,12 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     public float speed = 2;
-    public float time;
 
     public GameObject self;
 
     void Start()
     {
-        speed = time/3;
+
     }
  
     void FixedUpdate()
