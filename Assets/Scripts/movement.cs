@@ -16,6 +16,6 @@ public class movement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, 5);
-        self.GetComponent<Rigidbody>().MovePosition(transform.position + m_Input * Time.deltaTime * 4);
+        self.GetComponent<Rigidbody>().MovePosition(transform.position + m_Input * Time.deltaTime * 6);
     }
 }

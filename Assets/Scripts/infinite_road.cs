@@ -22,15 +22,16 @@ public class infinite_road : MonoBehaviour
     {
         Debug.Log(transform.position.z);
 
-        if ((transform.position.z) >= (currentNum * 100 + 100))
+        if ((transform.position.z) >= (currentNum * 100 + 102))
         {   
-            Debug.Log("test");
-
             currentNum++;
             Destroy(current);
 
             farthestPlaced++;
             Instantiate(blank_segment, new Vector3 (0, 0, farthestPlaced * 100 + 50), Quaternion.identity);
+            GameObject.Find("emptySegment(Clone)").name = "Segment (" + farthestPlaced  + ")";
+
+            current = GameObject.Find("Segment (" + currentNum + ")");
         }
     }
 }
