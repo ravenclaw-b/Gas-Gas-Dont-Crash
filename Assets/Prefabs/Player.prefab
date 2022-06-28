@@ -2132,7 +2132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current: {fileID: 0}
-  blank_segment: {fileID: 4945295513320276099, guid: d2cd21790af5946d18fb38b87c4d7ee0, type: 3}
+  rightWallSegment: {fileID: 6489243567150780199, guid: 08ba656fe02677230a98757e31a554b3, type: 3}
+  middleWallSegment: {fileID: 3095746242900102503, guid: bb357bde0c83c128bb28d25659310fbb, type: 3}
+  leftWallSegment: {fileID: 5507275526928914282, guid: 272a6153220defacaac9759f7762ac42, type: 3}
 --- !u!1 &5719373391571015800
 GameObject:
   m_ObjectHideFlags: 0
