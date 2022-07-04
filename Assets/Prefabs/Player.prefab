@@ -2024,6 +2024,7 @@ GameObject:
   - component: {fileID: 5718160597614419795}
   - component: {fileID: 7474912607657017886}
   - component: {fileID: 8045013424148613190}
+  - component: {fileID: 3627274375066829372}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2132,9 +2133,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current: {fileID: 0}
-  rightWallSegment: {fileID: 6489243567150780199, guid: 08ba656fe02677230a98757e31a554b3, type: 3}
-  middleWallSegment: {fileID: 3095746242900102503, guid: bb357bde0c83c128bb28d25659310fbb, type: 3}
-  leftWallSegment: {fileID: 5507275526928914282, guid: 272a6153220defacaac9759f7762ac42, type: 3}
+  currentWall: {fileID: 0}
+  emptySegment: {fileID: 4945295513320276099, guid: d2cd21790af5946d18fb38b87c4d7ee0, type: 3}
+  wall: {fileID: 3473481768290488929, guid: f4ef3f90e8ad371f483c2f7ea3cf2b01, type: 3}
+--- !u!114 &3627274375066829372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719365107971553070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8160c18ffb35559619a6a8433d1316df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5719373391571015800
 GameObject:
   m_ObjectHideFlags: 0

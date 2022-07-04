@@ -5,10 +5,10 @@ using UnityEngine;
 public class infinite_road : MonoBehaviour
 {
     [SerializeField] GameObject current;
+    [SerializeField] GameObject currentWall;
 
-    [SerializeField] GameObject rightWallSegment;
-    [SerializeField] GameObject middleWallSegment;
-    [SerializeField] GameObject leftWallSegment;
+    [SerializeField] GameObject emptySegment;
+    [SerializeField] GameObject wall;
 
     GameObject last;
     int currentNum = 1;
@@ -20,20 +20,29 @@ public class infinite_road : MonoBehaviour
 
         if (type == 1)
         {
-            Instantiate(rightWallSegment, new Vector3 (0, 0, farthestPlaced * 50 + 50), Quaternion.identity);
-            GameObject.Find("rightWallSegment(Clone)").name = "Segment (" + position  + ")";
+            Instantiate(emptySegment, new Vector3 (0, 0, farthestPlaced * 50 + 50), Quaternion.identity);
+            GameObject.Find("emptySegment(Clone)").name = "Segment (" + position  + ")";
+
+            Instantiate(wall, new Vector3 (-7, 3, farthestPlaced * 50 + 50), Quaternion.identity);
+            GameObject.Find("wall(Clone)").name = "wall (" + position  + ")";
         }
 
         else if (type == 2)
         {
-            Instantiate(middleWallSegment, new Vector3 (0, 0, farthestPlaced * 50 + 50), Quaternion.identity);
-            GameObject.Find("middleWallSegment(Clone)").name = "Segment (" + position  + ")";
+            Instantiate(emptySegment, new Vector3 (0, 0, farthestPlaced * 50 + 50), Quaternion.identity);
+            GameObject.Find("emptySegment(Clone)").name = "Segment (" + position  + ")";
+
+            Instantiate(wall, new Vector3 (0, 3, farthestPlaced * 50 + 50), Quaternion.identity);
+            GameObject.Find("wall(Clone)").name = "wall (" + position  + ")";
         }
 
         else if (type == 3)
         {
-            Instantiate(leftWallSegment, new Vector3 (0, 0, farthestPlaced * 50 + 50), Quaternion.identity);
-            GameObject.Find("leftWallSegment(Clone)").name = "Segment (" + position  + ")";
+            Instantiate(emptySegment, new Vector3 (0, 0, farthestPlaced * 50 + 50), Quaternion.identity);
+            GameObject.Find("emptySegment(Clone)").name = "Segment (" + position  + ")";
+
+            Instantiate(wall, new Vector3 (7, 3, farthestPlaced * 50 + 50), Quaternion.identity);
+            GameObject.Find("wall(Clone)").name = "wall (" + position  + ")";
         }
     }   
 
@@ -49,18 +58,18 @@ public class infinite_road : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Debug.Log(transform.position.z);
-
+    { 
         if ((transform.position.z) >= (currentNum * 50 + 102))
         {   
             currentNum++;
             Destroy(current);
+            Destroy(currentWall);
 
             farthestPlaced++;
             placeSegment(farthestPlaced);
 
             current = GameObject.Find("Segment (" + currentNum + ")");
+            currentWall = GameObject.Find("wall (" + currentNum + ")");
         }
     }
 }
