@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class camera_movement : MonoBehaviour
 {
-    public Transform car;
+    public Transform Player;
     public Vector3 cameraOffset;
+
+    public bool playerIsAlive = true;
+
 
     void Start() 
     {
-        cameraOffset = transform.position - car.transform.position;
+        cameraOffset = transform.position - Player.transform.position;
     }
     void LateUpdate()
     {
-        Vector3 newPos = car.transform.position + cameraOffset;
-        transform.position = newPos;
+        if (playerIsAlive)
+        {
+            Vector3 newPos = Player.transform.position + cameraOffset;
+            transform.position = newPos;
+        }
     }
 }

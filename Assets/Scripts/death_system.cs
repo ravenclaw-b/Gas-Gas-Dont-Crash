@@ -17,8 +17,11 @@ public class death_system : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "wall")
-        {
+        if (collision.gameObject.tag == "Player")
+        {   
+            GameObject.Find("Cam").GetComponent<camera_movement>().playerIsAlive = false;
+
+            Destroy(collision.gameObject);
             Debug.Log("You died");
         }
     }
