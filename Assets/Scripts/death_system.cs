@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class death_system : MonoBehaviour
 {
@@ -17,9 +18,20 @@ public class death_system : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "wall")
-        {
-            Debug.Log("You died");
+        
+        if (collision.gameObject.tag == "Player")
+        {   
+            Destroy(collision.gameObject);
+            StartCoroutine(restart());
         }
+    }
+     
+    IEnumerator restart()
+    {
+        GameObject.Find("Cam").GetComponent<camera_movement>().playerIsAlive = false;
+
+        yield return new WaitForSeconds(3);
+
+        SceneManager.LoadScene("Game");
     }
 }
