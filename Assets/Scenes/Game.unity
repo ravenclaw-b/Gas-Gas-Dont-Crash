@@ -320,7 +320,6 @@ GameObject:
   - component: {fileID: 435317373}
   - component: {fileID: 435317372}
   - component: {fileID: 435317371}
-  - component: {fileID: 435317370}
   m_Layer: 5
   m_Name: UIcanvas
   m_TagString: Untagged
@@ -328,18 +327,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &435317370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435317369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126d602730c7eb841af428d47db7bd0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &435317371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,6 +1338,18 @@ PrefabInstance:
     - target: {fileID: 5716401746873626084, guid: 6d362cd1dfe3dabb3a1293254b009274, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718160597614419795, guid: 6d362cd1dfe3dabb3a1293254b009274, type: 3}
+      propertyPath: m_Size.x
+      value: 1.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718160597614419795, guid: 6d362cd1dfe3dabb3a1293254b009274, type: 3}
+      propertyPath: m_Size.y
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718160597614419795, guid: 6d362cd1dfe3dabb3a1293254b009274, type: 3}
+      propertyPath: m_Size.z
+      value: 4.56
       objectReference: {fileID: 0}
     - target: {fileID: 5719365107971553070, guid: 6d362cd1dfe3dabb3a1293254b009274, type: 3}
       propertyPath: m_Name
