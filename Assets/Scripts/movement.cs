@@ -18,9 +18,9 @@ public class movement : MonoBehaviour
             Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
             Vector3 newPos = transform.position + new Vector3(0, 0, speed);
 
-            if(newPos.x > -9 && newPos.x < 9)
+            if(( (m_Input * Time.deltaTime * Vector3(2, 0, 0) ).x > -9) && ( (m_Input * Time.deltaTime * Vector3(2, 0, 0) ).x < 9))
             {
-                newPos += m_Input * speed * Time.deltaTime;
+                newPos += m_Input * Time.deltaTime;
             }
 
             this.GetComponent<Rigidbody>().MovePosition(newPos);
