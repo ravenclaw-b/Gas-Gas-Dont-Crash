@@ -17,7 +17,7 @@ public class movement : MonoBehaviour
         {               
             Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
     
-            Vector3 forward = new Vector3(0, 0, speed/4);
+            Vector3 forward = new Vector3(0, 0, 2);
             Vector3 horizontal = (m_Input * Time.deltaTime * 10) + transform.position;
 
             if(horizontal.x > -9 && horizontal.x < 9)
